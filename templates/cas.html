@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div class="container">
+
+  <h3>Número CAS</h3>
+
+<hr>
+
+<p>O que deseja fazer? </p>
+
+<ul style="list-style-type:none;">
+
+  <li> <a href="{{ url_for('consulta_cas') }}" class="btn btn-primary"> Consultar CAS</a></li><br>
+  <li> <a href="{{ url_for('atualiza_cas') }}" class="btn btn-primary"> Atualizar CAS</a></li><br>
+  <li> <a href="{{ url_for('registra_cas') }}" class="btn btn-primary"> Registrar CAS</li></a>
+
+</ul>
+
+
+</div>
+
+  {% endblock %}

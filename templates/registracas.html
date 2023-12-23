@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div class="container">
+
+    <h4>Registra CAS</h4>
+
+    <form method='POST' action="{{ url_for('registra_cas') }}">
+        <div class="form-row">
+  
+            <div class="form-group col-md-6">
+                <label for="formula">Fórmula</label>
+                <input type="text" class="form-control" id="formula" placeholder="Fórmula" name="formula">
+            </div>
+  
+            <div class="form-group col-md-6">
+                <label for="nomenclatura">Nomenclatura</label>
+                <input type="text" class="form-control" id="nomenclatura" placeholder="Nomenclatura" name="nomenclatura">
+            </div>
+      
+  
+            <div class="form-group col-md-6">
+                <label for="numero_cas">Número CAS</label>
+                <input type="text" class="form-control" id="numero_cas" placeholder="No formato: CAS7440-03-1" name="numero_cas">
+            </div>
+            <br>
+       
+            <button type="submit" class="btn btn-primary">Registrar</button>
+  
+        </div>
+    
+    </form>
+    <hr>
+
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Fórmula</th>
+            <th scope="col">Nomenclatura</th>
+            <th scope="col">CAS</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+        {% for cas in cas_results %}    
+        <tr>
+            
+            <td>{{ cas.formula }}</td>
+            <td>{{ cas.nomenclatura }}</td>
+            <td>{{ cas.numero_cas }}</td>
+        </tr>
+        {% endfor %}
+    
+
+        </tbody>
+    </table>
+
+
+    
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+    <div class="container">
+
+    <h4>Atualiza CAS</h4>
+
+    <hr>
+    
+
+    <form method='POST' action="{{ url_for('atualiza_cas') }}">
+        <div class="form-row">
+
+            <div class="form-group col-md-6">
+                <label for="numero_cas">Ação a ser executada</label>
+                <select class="form-control" name="option">
+                    <option class="form-control">Consulta</option>
+                    <option class="form-control">Atualiza</option>
+                </select>
+                <br>
+  
+            <div class="form-group col-md-6">
+                <label for="formula">Fórmula</label>
+                <input type="text" class="form-control" id="formula" name="formula" value="{{ cas_results.formula }}">
+            </div>
+  
+            <div class="form-group col-md-6">
+                <label for="nomenclatura">Nomenclatura</label>
+                <input type="text" class="form-control" id="nomenclatura" name="nomenclatura" value="{{ cas_results.nomenclatura }}">
+            </div>
+      
+  
+            <div class="form-group col-md-6">
+                <label for="numero_cas">Número CAS <span>| formato: CAS7440-03-1</span></label>
+                <input type="text" class="form-control" id="numero_cas" name="numero_cas" value="{{ cas_results.numero_cas }}">
+            </div>
+            <br>
+            
+                          
+            </div>
+       
+            <button type="submit" class="btn btn-primary">Executar</button>
+  
+        </div>
+    
+    </form>
+
+    
+    </div>
+
+  {% endblock %}

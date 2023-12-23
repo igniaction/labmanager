@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div class="container">
+
+    <h3>Consulta CAS</h3>
+  
+  <hr>
+  
+  <form method="POST" action="/consulta/cas">
+    <div class="form-row">
+  
+      <div class="form-group col-md-6">
+        <label for="numero_cas">Informe o número CAS</label>
+        <input type="text" class="form-control" id="numero_cas" placeholder="No formato: CAS7440-03-1" name="numero_cas">
+      </div>
+      <br>
+  
+    </div>
+     
+    <Div>
+  
+      <button type="submit" class="btn btn-primary">Consultar</button>
+  
+    </Div>
+      
+  
+  </form>
+
+  <hr>
+  
+
+  <p> <b>Fórmula</b>: {{ cas_results.formula }} </p>
+  <p> <b>Nomenclatura</b>: {{ cas_results.nomenclatura }}</p>
+  <p> <b>Número CAS</b>: {{ cas_results.numero_cas }}</p>
+  
+  
+  
+  
+  </div>
+
+
+
+ {% endblock %} 

@@ -1,0 +1,56 @@
+1 Criar conta em pythonanywhere
+Bash
+mkvirtualenv --python=/usr/bin/python3.4 env
+pip install flask
+criar um repositorio no github
+adicionar meu repositorio ao github
+git remote add origin https://...
+git status
+git push origin master
+username
+password
+
+
+git clone github source code
+
+dashbourd
+web
+add new app
+next
+manual configuration
+select python version
+
+enter path to a virtualenv 
+adicionar o nome env
+
+
+
+wsgi configuration file /var/www/pretty....py
+remove hello world code and application
+
+comment out import sys
+path
+if path
+sys.path
+from main_flask[nome do arquivo que contem o app] ...
+
+mudar o nome do path para o nome do diretorio
+
+apontar corretamente o banco de dados
+
+git --version
+git config --global user.name "nome"
+git config --global user.name
+
+
+
+
+
+
+
+
+
+
+
+
+
